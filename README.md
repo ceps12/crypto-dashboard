@@ -1,46 +1,99 @@
-# Getting Started with Create React App
+# Crypto Dashboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Real-time cryptocurrency tracking dashboard with interactive charts, portfolio management, and price alerts using public API data.
 
-## Available Scripts
+## ✨ Features
 
-In the project directory, you can run:
+- **Market Overview** — Live cryptocurrency prices, market caps, volumes, and 7-day sparklines
+- **Portfolio Tracking** — Add your crypto assets, track profit/loss, visualize allocation with pie charts
+- **Price Alerts** — Set alerts for when coins go above/below target prices
+- **Real-time Updates** — Auto-refreshes market data every 60 seconds
+- **Dark Theme** — Beautiful dark UI with smooth animations
+- **Responsive Design** — Works on desktop, tablet, and mobile
 
-### `npm start`
+## 🚀 Live Demo
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+https://ceps12.github.io/crypto-dashboard/
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## 🛠 Tech Stack
 
-### `npm test`
+- **React 19** with TypeScript
+- **React Router** for navigation
+- **Recharts** for interactive charts
+- **CoinGecko API** for real-time crypto data
+- **LocalStorage** for persistent portfolio and alerts
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 📦 Installation
 
-### `npm run build`
+```bash
+# Clone the repository
+git clone https://github.com/ceps12/crypto-dashboard.git
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Navigate to the project directory
+cd crypto-dashboard
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Install dependencies
+npm install
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Start the development server
+npm start
 
-### `npm run eject`
+# Build for production
+npm run build
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+# Deploy to GitHub Pages
+npm run deploy
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 📁 Project Structure
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```
+src/
+├── api/
+│   └── cryptoApi.ts          # CoinGecko API calls
+├── components/
+│   └── Navbar/
+│       ├── Navbar.tsx
+│       └── Navbar.css
+├── context/
+│   └── CryptoContext.tsx     # Global state management
+├── pages/
+│   ├── MarketOverview/       # Market data table
+│   ├── Portfolio/            # Portfolio tracking
+│   └── Alerts/               # Price alerts
+├── styles/
+│   └── global.css            # Global styles & variables
+├── types/
+│   └── index.ts              # TypeScript interfaces
+└── App.tsx                   # Main app component
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## 🎨 Features Detail
 
-## Learn More
+### Market Overview
+- Top 20 cryptocurrencies by market cap
+- Live price updates every 60 seconds
+- 24h price change indicators
+- Interactive 7-day sparkline charts
+- Total market cap and volume stats
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Portfolio Management
+- Add multiple crypto assets
+- Track buy price vs current price
+- Automatic P/L calculation
+- Portfolio allocation pie chart
+- Persistent storage (LocalStorage)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Price Alerts
+- Set alerts for price thresholds
+- Visual progress indicators
+- Triggered state notifications
+- Delete alerts anytime
+
+## 🔌 API
+
+This project uses the [CoinGecko API](https://www.coingecko.com/en/api) for cryptocurrency data.
+
+## 📄 License
+
+MIT © ceps12

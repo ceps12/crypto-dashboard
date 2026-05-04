@@ -1,26 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { CryptoProvider } from './context/CryptoContext';
+import Navbar from './components/Navbar/Navbar';
+import MarketOverview from './pages/MarketOverview/MarketOverview';
+import Portfolio from './pages/Portfolio/Portfolio';
+import Alerts from './pages/Alerts/Alerts';
+import './styles/global.css';
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <CryptoProvider>
+      <BrowserRouter>
+        <div className="app">
+          <Navbar />
+          <main>
+            <Routes>
+              <Route path="/" element={<MarketOverview />} />
+              <Route path="/portfolio" element={<Portfolio />} />
+              <Route path="/alerts" element={<Alerts />} />
+            </Routes>
+          </main>
+        </div>
+      </BrowserRouter>
+    </CryptoProvider>
   );
-}
+};
 
 export default App;

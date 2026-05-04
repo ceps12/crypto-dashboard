@@ -1,0 +1,227 @@
+.alerts {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+.alerts__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.alerts__title {
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+.add-btn {
+  padding: 0.5rem 1.25rem;
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.add-btn:hover {
+  background: var(--accent-hover);
+}
+
+.alert-form {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+  padding: 1.25rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  flex-wrap: wrap;
+}
+
+.alert-form select,
+.alert-form input {
+  padding: 0.625rem 0.875rem;
+  background: var(--bg-primary);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text-primary);
+  font-size: 0.875rem;
+  min-width: 150px;
+}
+
+.alert-form select:focus,
+.alert-form input:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.submit-btn {
+  padding: 0.625rem 1.5rem;
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background: var(--accent-hover);
+}
+
+.alerts__empty {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: var(--text-secondary);
+}
+
+.alerts__empty-icon {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.alerts__empty h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+}
+
+.alerts__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1rem;
+}
+
+.alert-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: all 0.2s ease;
+}
+
+.alert-card--triggered {
+  border-color: var(--yellow);
+  box-shadow: 0 0 20px rgba(245, 158, 11, 0.1);
+}
+
+.alert-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.alert-card__coin {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.alert-card__symbol {
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.alert-card__condition {
+  font-size: 0.75rem;
+  padding: 0.125rem 0.5rem;
+  background: var(--bg-primary);
+  border-radius: 4px;
+  color: var(--text-secondary);
+}
+
+.alert-card__badge {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.75rem;
+  background: var(--yellow-bg);
+  color: var(--yellow);
+  border-radius: 4px;
+  font-weight: 600;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+.alert-card__prices {
+  display: flex;
+  justify-content: space-between;
+}
+
+.alert-card__price {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+}
+
+.alert-card__label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.alert-card__value {
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.alert-card__progress {
+  height: 4px;
+  background: var(--bg-primary);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.alert-card__progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), var(--accent-hover));
+  border-radius: 2px;
+  transition: width 0.5s ease;
+}
+
+.alert-card--triggered .alert-card__progress-bar {
+  background: linear-gradient(90deg, var(--yellow), #fbbf24);
+}
+
+.alert-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.alert-card__date {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.remove-btn {
+  padding: 0.25rem 0.75rem;
+  background: var(--red-bg);
+  color: var(--red);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.remove-btn:hover {
+  background: var(--red);
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .alert-form {
+    flex-direction: column;
+  }
+}

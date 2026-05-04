@@ -1,0 +1,219 @@
+.portfolio {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+.portfolio__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.portfolio__title {
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+.add-btn {
+  padding: 0.5rem 1.25rem;
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.add-btn:hover {
+  background: var(--accent-hover);
+}
+
+.add-form {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+  padding: 1.25rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  flex-wrap: wrap;
+}
+
+.add-form select,
+.add-form input {
+  padding: 0.625rem 0.875rem;
+  background: var(--bg-primary);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text-primary);
+  font-size: 0.875rem;
+  min-width: 150px;
+}
+
+.add-form select:focus,
+.add-form input:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.submit-btn {
+  padding: 0.625rem 1.5rem;
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background: var(--accent-hover);
+}
+
+.portfolio__empty {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: var(--text-secondary);
+}
+
+.portfolio__empty-icon {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.portfolio__empty h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+}
+
+.portfolio__summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.summary-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.summary-card__label {
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+}
+
+.summary-card__value {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.portfolio__content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 1.5rem;
+}
+
+.portfolio__chart {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.portfolio__chart h3 {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: var(--text-secondary);
+}
+
+.portfolio__table-wrapper {
+  overflow-x: auto;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+.portfolio__table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.portfolio__table th {
+  padding: 0.875rem 1rem;
+  text-align: left;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  border-bottom: 1px solid var(--border);
+}
+
+.portfolio__table td {
+  padding: 0.875rem 1rem;
+  font-size: 0.875rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.portfolio__table tr:hover {
+  background: var(--bg-hover);
+}
+
+.portfolio__table tr:last-child td {
+  border-bottom: none;
+}
+
+.remove-btn {
+  padding: 0.25rem 0.5rem;
+  background: var(--red-bg);
+  color: var(--red);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.75rem;
+}
+
+.remove-btn:hover {
+  background: var(--red);
+  color: white;
+}
+
+.text-green { color: var(--green); }
+.text-red { color: var(--red); }
+
+.coin-cell {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.coin-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.coin-name { font-weight: 600; }
+.coin-symbol { font-size: 0.75rem; color: var(--text-muted); }
+.price-cell { font-weight: 600; }
+
+@media (max-width: 768px) {
+  .portfolio__content {
+    grid-template-columns: 1fr;
+  }
+  
+  .add-form {
+    flex-direction: column;
+  }
+}
